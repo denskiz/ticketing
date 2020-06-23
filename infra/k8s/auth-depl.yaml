@@ -1,7 +1,32 @@
-apiVersions: app/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: auth-depl
 spec:
   # run one copy of the image
   replicas: 1
+  selector:
+    matchlabels:
+      app: auth
+  template:
+    metadata:
+      labels:
+        app: auth
+    spec:
+      containers:
+        - name: auth
+          image: dennisent/auth
+---
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: auth-Service
+  spec:
+    selector: 
+      app: auth
+    ports:
+      - name: auth
+        protocol: TCP
+        port: 3000
+        targetPort: 3000
+        
