@@ -1,0 +1,7 @@
+apiVersions: app/v1
+kind: Deployment
+metadata:
+  name: auth-depl
+spec:
+  # run one copy of the image
+  replicas: 1
