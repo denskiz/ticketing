@@ -3,10 +3,9 @@ kind: Deployment
 metadata:
   name: auth-depl
 spec:
-  # run one copy of the image
   replicas: 1
   selector:
-    matchlabels:
+    matchLabels:
       app: auth
   template:
     metadata:
@@ -17,16 +16,15 @@ spec:
         - name: auth
           image: dennisent/auth
 ---
-  apiVersion: v1
-  kind: Service
-  metadata:
-    name: auth-Service
-  spec:
-    selector: 
-      app: auth
-    ports:
-      - name: auth
-        protocol: TCP
-        port: 3000
-        targetPort: 3000
-        
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-srv
+spec:
+  selector:
+    app: auth
+  ports:
+    - name: auth
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
