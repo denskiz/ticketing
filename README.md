@@ -11,6 +11,19 @@ nvm install --lts
 
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
 
+## Technologies Used
+
+Docker, Kubernetes, Typescript on Backend
+
+Backend: Node, Express, JSON webtoken, MongoDB
+
+Frontend: Server Side Rendering with NextJS
+Next not writen in TypeScript
+Bootstrap 5 alpha
+https://v5.getbootstrap.com/
+
+## To get Started
+
 isthisunsafe
 
 ticketing.dev
@@ -19,10 +32,8 @@ minikube start --driver=virtualbox
 
 minikube addons enable ingress
 
-## Technologies Used
+skaffold dev
 
-Docker, Kubernetes, Typescript
+We are using skaffold to run all the kubernetes clusters and docker pods to save time deploying and rebuilding them all the time.
 
-Backend: Node, Express, JWSON webtoken, MongoDB
-
-Frontend:
+Get inital Props is the only place where we can fetch data during the server side rendering process
