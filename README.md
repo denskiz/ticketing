@@ -1,4 +1,7 @@
-Creating my First Microservices App
+# Ticketing
+
+E-Commerce app using Microservices built with Node, React, Docker and Kubernetes
+
 Currently building the auth back end
 
 node 14.3.0 breaks app
@@ -15,3 +18,11 @@ ticketing.dev
 minikube start --driver=virtualbox
 
 minikube addons enable ingress
+
+## Technologies Used
+
+Docker, Kubernetes, Typescript
+
+Backend: Node, Express, JWSON webtoken, MongoDB
+
+Frontend:
