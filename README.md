@@ -37,3 +37,15 @@ skaffold dev
 We are using skaffold to run all the kubernetes clusters and docker pods to save time deploying and rebuilding them all the time.
 
 Get inital Props is the only place where we can fetch data during the server side rendering process
+
+loadbalancer service name and namespace:
+
+http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
+
+## NPM Packages
+
+npm login
+
+npm publish --access public
+
+npx force-unpublish pkg-name 'common'
