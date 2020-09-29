@@ -49,3 +49,5 @@ npm login
 npm publish --access public
 
 npx force-unpublish pkg-name 'common'
+
+npm update @detickets/common
