@@ -4,8 +4,7 @@ E-Commerce app using Microservices built with Node, React, Docker and Kubernetes
 
 Currently building the auth back end
 
-node 14.3.0 breaks app
-Now using node v12.18.0
+Using node v14.13.0
 
 nvm install --lts
 
@@ -51,3 +50,9 @@ npm publish --access public
 npx force-unpublish pkg-name 'common'
 
 npm update @detickets/common
+
+# Event Bus
+
+Using NATS Streaming Server to share events with all the different services in the application
+
+https://docs.nats.io/
